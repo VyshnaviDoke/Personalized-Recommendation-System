@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #f70505);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #f1f1f1;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 35px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            font-size: 18px;
+            background: #ffbd39;
+            color: #000;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #ffdd7a;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 30px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>🎬 Movie Recommendation System</h2>
+
+        <form action="/results" method="POST">
+
+            <h3>User-Based Models</h3>
+            <input type="text" name="user_id" placeholder="Enter User ID (1 - 120)">
+
+            <h3>Movie-Based Models</h3>
+            <input type="text" name="movie_name" placeholder="Enter Movie Name">
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+
+</body>
+</html>
